@@ -92,6 +92,6 @@ Existem várias aplicações para detecção e contagem de objetos. Muitas aplic
 
 A seguir estão dispostos links referentes aos repositórios necessários para a execução do projeto:
 
-[https://github.com/mpenidol/turtlebot3_simulations.git](https://github.com/mpenidol/turtlebot3_simulations.git
+https://github.com/mpenidol/navigation2.git
 
-[https://github.com/mpenidol/navigation2.git](https://github.com/mpenidol/navigation2.git)
+https://github.com/mpenidol/turtlebot3_simulations.git
