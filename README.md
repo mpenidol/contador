@@ -47,8 +47,8 @@ ros2 launch nav2_bringup trial2.py headless:=False
  
 ## 4. Resultados
  
+![Screenshot from 2022-12-20 16-00-49](https://user-images.githubusercontent.com/80800606/208907772-db634ca8-0909-4172-86d8-e5559915e697.png)
 
- 
  
 ---
  
