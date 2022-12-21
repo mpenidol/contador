@@ -25,31 +25,37 @@ Opcional:
 Copie os repositórios do Github para o *workspace* do ros:
  
 ```bash
-$ cd ros_ws2/src
-$ git clone https://github.com/mpenidol/contador
-$ git clone https://github.com/mpenidol/navigation2
-$ git clone https://github.com/mpenidol/turtlebot3_simulations.git
+cd ros_ws2/src
+git clone https://github.com/mpenidol/contador
+git clone https://github.com/mpenidol/navigation2
+git clone https://github.com/mpenidol/turtlebot3_simulations.git
 ```
 É necessário instalar as dependêncisas
 ```bash
-$ rosdep install -i --from-path src --rosdistro humble -y
+rosdep install -i --from-path src --rosdistro humble -y
 ```
 Além disso, é necessário realixar o *export* de algumas variáveis de ambiente.
 > :warning: É necessário realizar a alteração do usuário (*USER*) no segundo *export* para o usuário onde está configurado o *workspace* do ROS.
 
 ```bash
-$ export TURTLEBOT3_MODEL=waffle
-$ export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/home/USER/ros2_ws/src/turtlebot3_simulations/turtlebot3_gazebo/models
+export TURTLEBOT3_MODEL=waffle
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:/home/USER/ros2_ws/src/turtlebot3_simulations/turtlebot3_gazebo/models
 ```
+Por ser executado em python, é necessário realizar a instalação de bibliotecas e dependências do código de contagem e navegação:
 
+```bash
+pip install shapely
+pip install -U scikit-learn
+pip install pandas
+```
 
 A seguir, será necessário realizar o *build* do pacote no *workspace* desejado.
  
 ```bash
-$ source /opt/ros/humble/setup.bash
-$ cd ros_ws2
-$ colcon build
-$ . install/local_setup.bash
+source /opt/ros/humble/setup.bash
+cd ros_ws2
+colcon build
+. install/local_setup.bash
 ```
 ---
 ## 3. Execução
