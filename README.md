@@ -13,7 +13,8 @@ Reconhecer e interagir com o ambiente é de total importância no âmbito da rob
 1. Ros Humble
   - Nav2
   - Gazebo
-2. Ubuntu 2022
+2. Ubuntu 22.04
+3. TurtleBot (Waffle)
  
 ---
  
