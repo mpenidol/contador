@@ -35,7 +35,7 @@ $ git clone https://github.com/mpenidol/turtlebot3_simulations.git
 $ rosdep install -i --from-path src --rosdistro humble -y
 ```
 Além disso, é necessário realixar o *export* de algumas variáveis de ambiente.
-> :warning: **É necessário realizar a alteração do usuário (*USER*) no segundo *export* para o usuário onde está configurado o *workspace* do ROS.**
+> :warning: É necessário realizar a alteração do usuário (*USER*) no segundo *export* para o usuário onde está configurado o *workspace* do ROS.
 
 ```bash
 $ export TURTLEBOT3_MODEL=waffle
