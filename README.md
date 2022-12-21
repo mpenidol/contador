@@ -16,6 +16,7 @@ Reconhecer e interagir com o ambiente é de total importância no âmbito da rob
 3. TurtleBot (Waffle)
 
 Opcional:
+
 4. Docker
 ---
  
