@@ -29,9 +29,6 @@ cd ros_ws2/src
 git clone https://github.com/mpenidol/contador
 git clone https://github.com/mpenidol/navigation2
 git clone https://github.com/mpenidol/turtlebot3_simulations.git
-
- 
-
 ```
 Os repositórios nav2 e turtlebot3 são os pacotes padrões mas com algumas alterações. 
 No nav2 o mapa padrão do ambiente com 9 cilindros foi removido e foi colocado um mapa que contém apenas as restrições do ambiente. Na aba do launch, foram adicionados dois launchs (trial1.py e trial2.py), eles fazem a mesma função do tb3_simulation_launch.py, porém inicializam o robô em uma posição inicial diferente e chamam a rotina que realiza a navegação e contagem de objetos. Na pasta de params os arquivos com nome trial realizam a mesma tarefa que o na2_params.yaml, mas sem chamar as rotinas de navegação (global_cost_map, local_cost_map). No pacote do turtlebot, foram adicionados dois modelos de ambiente, que tem a distribuição dos cilindros mostrados na apresentação. Para usá-los basta trocar no arquivo do model do config.
