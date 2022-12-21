@@ -99,6 +99,13 @@ Um conjunto de leituras que resultam em pontos pŕoximos no ambiente podem simbo
 
 ![Screenshot from 2022-12-21 11-03-05](https://user-images.githubusercontent.com/80800606/208923535-68c512a5-4f85-407a-9861-baf2889ad091.png)
 
+A clusterização realizada retorna o ponto central de cada objeto identificado. Desta forma, para cada objeto identificado é necessário realizar um comparativo com objetos previamente identificados pela clusterização, verificando se este é um novo objeto.
+
+![Screenshot from 2022-12-21 11-11-35](https://user-images.githubusercontent.com/80800606/208926461-b4be3f3a-b478-46f7-992c-82a6cc8de847.png)
+
+Por fim, é realizada a sinalização visual no mapa quando um novo objeto é identificado, assim como é gerado um arquivo csv no diretório "~/Desktop/" contendo a coordenada dos objetos identificados.
+
+![Screenshot from 2022-12-21 11-18-54](https://user-images.githubusercontent.com/80800606/208927244-caafa3c9-eaec-4311-bb38-33a089b929da.png)
 
 ---
  
