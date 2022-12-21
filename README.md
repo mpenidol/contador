@@ -37,16 +37,11 @@ $ . install/local_setup.bash
 ---
 ## 3. Execução
  
-Primeiramente, é necessário executar o simulador TurtleBot3, que será utilizado como ambiente onde será realizada a identificação de obstáculos.
+O launch utilizado irá executar o ambiente de simulação Gazebo, o ambiente de visualização Rviz e o código responsável pela movimentação e contatem de objetos. Este é executado através do comando:
  
 ```bash
-ros2 launch nav2_bringup tb3_simulation_launch.py headless:=False
-```
- 
-A seguir, executar o nó responsável por realizar a localização e contagem dos objetos:
-```bash
-TROCAR AQUI
-```
+ros2 launch nav2_bringup trial2.py headless:=False```
+
 ---
  
 ## 4. Resultados
