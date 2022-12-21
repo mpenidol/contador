@@ -79,6 +79,27 @@ ros2 launch nav2_bringup trial2.py headless:=False
  
 ## 5. Algorítmo
  
+ A navegação do robô foi realizada através de um controlador de robô unicilo, onde é calculado um ρ que é a distância euclidiana até o ponto desejado, sendo Ψ a orientação do robô, e α é oângulo entre a orientação atual do robô e o vetor ρ através da seguinte equação.
+ 
+ ![Screenshot from 2022-12-21 10-39-26](https://user-images.githubusercontent.com/80800606/208919175-822f87f7-b6da-4848-b142-a3c83f3f580f.png)
+ 
+Por fim, a lei de controle utilizada para calcular as velocidades lineares e angulares, dado que vmax é a velocidade máxima permitida do robô e kωα é uma constante positiva, é calculada pela seguinte equação.
+ 
+![Screenshot from 2022-12-21 10-39-32](https://user-images.githubusercontent.com/80800606/208919684-37fba16f-7576-4176-bf7d-1732a621f58f.png)
+
+A partir disto, a partir deuma posição aleatória, foram determinados pontos fixos no mapa para que este realize a navegação de forma autônoma, enviando os pontos desejado, conforme disposto na imagem abaixo.
+
+![Screenshot from 2022-12-21 10-47-23](https://user-images.githubusercontent.com/80800606/208920181-3adcc7a9-579a-4bdf-b17f-7a970d6f6bf8.png)
+
+A contagem dos objetos é realizada através da clusterização realizada pelas leituras do LiDAR juntamente a informação de odometria obtida através das leituras dos encoders. A leitura do LiDAR é particionada em 360 posições, podendo obter a posição de cada ponto no mapa através de transformações trigonométricas. 
+
+![Screenshot from 2022-12-21 11-00-04](https://user-images.githubusercontent.com/80800606/208922930-fd3ebada-4afa-4421-94e6-9d9f82ab0eae.png)
+
+Um conjunto de leituras que resultam em pontos pŕoximos no ambiente podem simbolizar a presença de objetos no mesmo. Para isso, foi utilizado um algoritmo de agrupamento (DBSCAN) para juntar esses pontos.
+
+![Screenshot from 2022-12-21 11-03-05](https://user-images.githubusercontent.com/80800606/208923535-68c512a5-4f85-407a-9861-baf2889ad091.png)
+
+
 ---
  
 ## 6. Aprimoramentos
