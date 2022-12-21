@@ -146,6 +146,6 @@ https://github.com/mpenidol/navigation2.git
 
 https://github.com/mpenidol/turtlebot3_simulations.git
 
-O pacote de contagem pode ser executado através do container ROS.
+O pacote de contagem pode ser executado através de um container ROS.
 
 https://hub.docker.com/repository/docker/igorvieira10/object_counter/general
