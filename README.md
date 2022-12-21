@@ -11,11 +11,12 @@ Reconhecer e interagir com o ambiente é de total importância no âmbito da rob
 ## 1. Requisitos
  
 1. Ros Humble
-  - Nav2
   - Gazebo
 2. Ubuntu 22.04
 3. TurtleBot (Waffle)
- 
+
+Opcional:
+4. Docker
 ---
  
 ## 2. Instalação
