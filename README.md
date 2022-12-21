@@ -40,7 +40,7 @@ $ . install/local_setup.bash
 O launch utilizado irá executar o ambiente de simulação Gazebo, o ambiente de visualização Rviz e o código responsável pela movimentação e contatem de objetos. Este é executado através do comando:
  
 ```bash
-ros2 launch nav2_bringup trial2.py headless:=False```
+ros2 launch nav2_bringup trial2.py headless:=False
 ```
 
 ---
