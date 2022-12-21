@@ -70,14 +70,7 @@ ros2 launch nav2_bringup trial2.py headless:=False
 
 ---
  
-## 4. Resultados
- 
-![Screenshot from 2022-12-20 16-00-49](https://user-images.githubusercontent.com/80800606/208907772-db634ca8-0909-4172-86d8-e5559915e697.png)
-
- 
----
- 
-## 5. Algorítmo
+## 4. Algorítmo
  
  A navegação do robô foi realizada através de um controlador de robô unicilo, onde é calculado um ρ que é a distância euclidiana até o ponto desejado, sendo Ψ a orientação do robô, e α é oângulo entre a orientação atual do robô e o vetor ρ através da seguinte equação.
  
@@ -108,6 +101,29 @@ Por fim, é realizada a sinalização visual no mapa quando um novo objeto é id
 ![Screenshot from 2022-12-21 11-18-54](https://user-images.githubusercontent.com/80800606/208927244-caafa3c9-eaec-4311-bb38-33a089b929da.png)
 
 ---
+ 
+ ## 5. Resultados
+ ### Trial 1
+
+![Screenshot from 2022-12-20 16-00-49](https://user-images.githubusercontent.com/80800606/208907772-db634ca8-0909-4172-86d8-e5559915e697.png)
+
+ 
+A estratégia funcionou de forma satisfatória para as aplicações desejadas. Onde no primeiro trial o erro máximo em X foi de 0.25 e Y de 0.16, o erro médio em X foi de 0.13 e Y de 0.11. No segundo trial o erro máximo em X foi de 0.25 e Y de 0.43, o erro médio em X foi de 0.10 e Y de 0.15.
+
+ ![Screenshot from 2022-12-21 11-25-48](https://user-images.githubusercontent.com/80800606/208928101-27e35beb-4b80-44d4-9675-8bf6ca9157a6.png)
+
+  ### Trial 2
+  
+  ![Screenshot from 2022-12-21 11-27-40](https://user-images.githubusercontent.com/80800606/208928478-2f716aa1-fc92-45d2-aa23-8ca3133cf7ea.png)
+
+No segundo trial, acabou não ocorrendo a identificação de um cilindro devido a proximidade com outro, mas isso poderia ser resolvido com a calibração do critério de definição de novos obstáculos ou melhor calibração do DBSCAN.
+
+![Screenshot from 2022-12-21 11-29-02](https://user-images.githubusercontent.com/80800606/208928735-f25578fb-ec5e-405c-a009-2b8798f3f819.png)
+
+
+---
+ 
+ 
  
 ## 6. Aprimoramentos
  
