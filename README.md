@@ -41,6 +41,7 @@ O launch utilizado irá executar o ambiente de simulação Gazebo, o ambiente de
  
 ```bash
 ros2 launch nav2_bringup trial2.py headless:=False```
+```
 
 ---
  
