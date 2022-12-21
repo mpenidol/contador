@@ -19,13 +19,19 @@ Reconhecer e interagir com o ambiente é de total importância no âmbito da rob
  
 ## 2. Instalação
  
-Copie o repositório do Github para o workspace do ros:
+Copie os repositórios do Github para o workspace do ros:
  
 ```bash
 $ cd ros_ws2/src
-$ git clone https://github.com/igorvieira10/myread
+$ git clone https://github.com/mpenidol/contador
+$ git clone https://github.com/mpenidol/navigation2
+$ git clone https://github.com/mpenidol/turtlebot3_simulations.git
+```
+É necessário instalar as dependêncisas
+```bash
 $ rosdep install -i --from-path src --rosdistro humble -y
 ```
+
 A seguir, será necessário realizar o *build* do pacote no *workspace* desejado.
  
 ```bash
