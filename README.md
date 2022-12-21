@@ -1,6 +1,6 @@
-<h1 align="center">Contador de obstáculos</h1>
+<h1 align="center">Contador de objetos</h1>
  
-**Descrição**: Pacote criado para realizar a contagem de obstáculos em um ambiente.
+**Descrição**: Pacote criado para realizar a contagem de objetos em um ambiente.
  
 ## Visão geral
  
@@ -60,7 +60,7 @@ colcon build
 ---
 ## 3. Execução
  
-O launch utilizado irá executar o ambiente de simulação Gazebo, o ambiente de visualização Rviz e o código responsável pela movimentação e contatem de objetos. O pacote de contagem do objetos foi programado para realizar a rotina de contatem em dois ambientes cujos obstáculos estão posicionados diferes. Os launchers contendo os diferentes ambientes de execução são executados pelos comandos:
+O launch utilizado irá executar o ambiente de simulação Gazebo, o ambiente de visualização Rviz e o código responsável pela movimentação e contatem de objetos. O pacote de contagem do objetos foi programado para realizar a rotina de contatem em dois ambientes cujos obstáculos estão posicionados diferentes. Os launchers contendo os diferentes ambientes de execução são executados pelos comandos:
  
 ```bash
 ros2 launch nav2_bringup trial2.py headless:=False
@@ -124,10 +124,11 @@ No segundo trial, acabou não ocorrendo a identificação de um cilindro devido 
 ---
  
  
- 
 ## 6. Aprimoramentos
  
 Tendo em vista que a navegação foi realizada a partir de um controlador de robô uniciclo, esta pode ser substituida para pelo stack de navegação Nav2, tornando o sistema mais robusto e confiável, além de ter mais suporte pela comunidade e possibilitar utilizar diferentes tipos de controladores para verificar a performance do algoritmo.
+
+A partir do momento que um objeto é identificado, o algorítmo não realiza a rechecagem deste para verificar se um objeto ainda está presente no ambiente, assim como a presença de possíveis objetos dinâmicos iriam deixar um rastro durante sua movimentação, sinalizando uma ocupação indevida do ambiente. Uma possível implementação é de realizar a rechecagem de objetos dentro de um alcance determinado do robô, "limpando" objetos que foram retirados, além de melhorar o comportamentamento em relação a obstáculos dinâmicos.
  
 ---
  
