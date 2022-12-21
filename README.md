@@ -95,3 +95,7 @@ A seguir estão dispostos links referentes aos repositórios necessários para a
 https://github.com/mpenidol/navigation2.git
 
 https://github.com/mpenidol/turtlebot3_simulations.git
+
+O pacote de contagem pode ser executado através do container ROS.
+
+https://hub.docker.com/repository/docker/igorvieira10/object_counter/general
