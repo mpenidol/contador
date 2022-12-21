@@ -54,10 +54,12 @@ $ . install/local_setup.bash
 ---
 ## 3. Execução
  
-O launch utilizado irá executar o ambiente de simulação Gazebo, o ambiente de visualização Rviz e o código responsável pela movimentação e contatem de objetos. Este é executado através do comando:
+O launch utilizado irá executar o ambiente de simulação Gazebo, o ambiente de visualização Rviz e o código responsável pela movimentação e contatem de objetos. O pacote de contagem do objetos foi programado para realizar a rotina de contatem em dois ambientes cujos obstáculos estão posicionados diferes. Os launchers contendo os diferentes ambientes de execução são executados pelos comandos:
  
 ```bash
 ros2 launch nav2_bringup trial2.py headless:=False
+ros2 launch nav2_bringup trial2.py headless:=False
+
 ```
 
 ---
@@ -77,10 +79,18 @@ ros2 launch nav2_bringup trial2.py headless:=False
  
 Tendo em vista que a navegação foi realizada a partir de um controlador de robô uniciclo, esta pode ser alterada para pelo stack de navegação Nav2, tornando o sistema mais robusto e confiável, além de ter mais suporte pela comunidade e possibilitar utilizar diferentes tipos de controladores para verificar a performance do algoritmo.
  
- 
- 
 ---
  
 ## 7. Possíveis Aplicações
 
 Existem várias aplicações para detecção e contagem de objetos. Muitas aplicações envolvem questões de exploração, como a identificação e exploração do ambiente; manutenção, conhecendo o ambiente previamente é possível verificar a integridade de estruturas físicas como pilares, colunas ou canos; ou até aplicações na indústria, como, por exemplo, na indústria madeireira, onde teria a aplicação manter contabilizado as árvores plantadas.
+
+
+---
+ 
+## 8. Links Úteis
+
+A seguir estão dispostos links referentes aos repositórios necessários para a execução do projeto:
+
+[https://github.com/mpenidol/turtlebot3_simulations.git](https://github.com/mpenidol/turtlebot3_simulations.git)
+[https://github.com/mpenidol/navigation2.git](https://github.com/mpenidol/navigation2.git)
