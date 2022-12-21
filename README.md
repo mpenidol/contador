@@ -70,7 +70,7 @@ ros2 launch nav2_bringup trial2.py headless:=False
 
 ---
  
-## 4. Algorítmo
+## 4. Algoritmo
  
  A navegação do robô foi realizada através de um controlador de robô unicilo, onde é calculado um ρ que é a distância euclidiana até o ponto desejado, sendo Ψ a orientação do robô, e α é oângulo entre a orientação atual do robô e o vetor ρ através da seguinte equação.
  
@@ -126,9 +126,9 @@ No segundo trial, acabou não ocorrendo a identificação de um cilindro devido 
  
 ## 6. Aprimoramentos
  
-Tendo em vista que a navegação foi realizada a partir de um controlador de robô uniciclo, esta pode ser substituida para pelo stack de navegação Nav2, tornando o sistema mais robusto e confiável, além de ter mais suporte pela comunidade e possibilitar utilizar diferentes tipos de controladores para verificar a performance do algoritmo.
+Tendo em vista que a navegação foi realizada a partir de um controlador de robô uniciclo, esta pode ser substituida para pelo stack de navegação Nav2, tornando o sistema mais robusto e confiável, além de ter mais suporte pela comunidade e possibilitar utilizar diferentes tipos de controladores para verificar a performance do algoritmo. Além disso, o controlador utilizado não integra a leitura do LiDAR em sua implementação, não sendo possível então realizar o desvio obstáculos, ficando limitado a um ambiente conhecido, onde os *goals* determinados não podem ter em seu caminho algo que obstrua sua movimentação. Desta forma, a utilização do *stack* de navegação Nav2 possibilita a utilização do algoritimo em ambientes genéricos.
 
-A partir do momento que um objeto é identificado, o algorítmo não realiza a rechecagem deste para verificar se um objeto ainda está presente no ambiente, assim como a presença de possíveis objetos dinâmicos iriam deixar um rastro durante sua movimentação, sinalizando uma ocupação indevida do ambiente. Uma possível implementação é de realizar a rechecagem de objetos dentro de um alcance determinado do robô, "limpando" objetos que foram retirados, além de melhorar o comportamentamento em relação a obstáculos dinâmicos.
+A partir do momento que um objeto é identificado, o algoritmo não realiza a rechecagem deste para verificar se um objeto ainda está presente no ambiente, assim como a presença de possíveis objetos dinâmicos iriam deixar um rastro durante sua movimentação, sinalizando uma ocupação indevida do ambiente. Uma possível implementação é de realizar a rechecagem de objetos dentro de um alcance determinado do robô, "limpando" objetos que foram retirados, além de melhorar o comportamentamento em relação a obstáculos dinâmicos.
  
 ---
  
@@ -150,3 +150,5 @@ https://github.com/mpenidol/turtlebot3_simulations.git
 O pacote de contagem pode ser executado através de um container ROS.
 
 https://hub.docker.com/repository/docker/igorvieira10/object_counter/general
+
+
