@@ -127,7 +127,7 @@ No segundo trial, acabou não ocorrendo a identificação de um cilindro devido 
  
 ## 6. Aprimoramentos
  
-Tendo em vista que a navegação foi realizada a partir de um controlador de robô uniciclo, esta pode ser alterada para pelo stack de navegação Nav2, tornando o sistema mais robusto e confiável, além de ter mais suporte pela comunidade e possibilitar utilizar diferentes tipos de controladores para verificar a performance do algoritmo.
+Tendo em vista que a navegação foi realizada a partir de um controlador de robô uniciclo, esta pode ser substituida para pelo stack de navegação Nav2, tornando o sistema mais robusto e confiável, além de ter mais suporte pela comunidade e possibilitar utilizar diferentes tipos de controladores para verificar a performance do algoritmo.
  
 ---
  
